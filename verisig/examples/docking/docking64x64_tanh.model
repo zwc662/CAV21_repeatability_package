@@ -73,7 +73,7 @@ hybrid reachability
 			}
 			inv
 			{
-				clock <= 0
+				clock <= 1.0
 			}
 		}
 		_cont_docking
