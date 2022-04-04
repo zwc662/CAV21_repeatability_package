@@ -101,7 +101,7 @@ hybrid reachability
 			}
 			inv
 			{
-				clock <= 0.1
+				clock <= 120
 			}
 		}
 		unsafe1
@@ -177,7 +177,7 @@ hybrid reachability
 		reset { clock' := 0.0}
 		interval aggregation
 		_cont_docking -> m0
-		guard { clock = 0.1 }
+		guard { clock = 150 }
 		reset { _f1' := x1 * 0.001 _f2' := x2 * 0.001 _f3' := x3 * 2 _f4' := x4 * 2 _f5' := x5 _f6' := x6 }
 		interval aggregation
 		startmode -> m0
