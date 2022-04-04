@@ -177,11 +177,11 @@ hybrid reachability
 		interval aggregation
 		_cont_docking -> m0
 		guard { clock = 0.1 }
-		reset { _f1' := x1/1000 _f2' := x2/1000 _f3':= x3 * 2 _f4':=x4 * 2 _f5':=x5 _f6':= x6}
+		reset { _f1' := x1 * 0.001 _f2' := x2 * 0.001 _f3' := x3 * 2 _f4' := x4 * 2 _f5' := x5 _f6' := x6 }
 		interval aggregation
 		startmode -> m0
 		guard { clock = 0.0 }
-		reset { _f1' := x1/1000 _f2' := x2/1000 _f3':= x3 * 2 _f4':=x4 * 2 _f5':=x5 _f6':= x6}
+		reset { _f1' := x1 * 0.001 _f2' := x2 * 0.001 _f3' := x3 * 2 _f4' := x4 * 2 _f5' := x5 _f6' := x6 }
 		interval aggregation
 	}
 	init
