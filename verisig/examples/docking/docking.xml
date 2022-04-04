@@ -92,9 +92,6 @@ clock := 0</assignment>
 x5 &gt;= x6</guard>
       <labelposition x="-14.0" y="-91.0" width="144.0" height="78.0" />
     </transition>
-    <transition source="1" target="5">
-      <guard>worldtime = 5 &amp;
-    </transition>
   </component>
   <component id="docking_net">
     <bind component="docking_sys" as="docking_sys_1" x="326.0" y="291.0" width="312.0" height="240.0" />
