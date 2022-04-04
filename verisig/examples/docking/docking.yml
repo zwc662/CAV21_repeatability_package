@@ -15,7 +15,7 @@ init:
     - x6 in [0.2697150717707441, 0.27552466108497276]
 
 unsafe:
-  - mode: crash
+  - mode: unsafe1
     states:
     - x6 - x5 <= 0.0 
 
