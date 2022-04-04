@@ -13,7 +13,7 @@ hybrid reachability
 		cutoff 1e-7
 		precision 100
 		output docking_64x64tanh_verisig2_x5x6_120steps
-		max jumps 181
+		max jumps 500
 		print on
 	}
 
@@ -73,7 +73,7 @@ hybrid reachability
 			}
 			inv
 			{
-				clock <= 1.0
+				clock <= 0
 			}
 		}
 		_cont_docking
@@ -101,7 +101,7 @@ hybrid reachability
 			}
 			inv
 			{
-				clock <= 120
+				clock <= 1.0
 			}
 		}
 		unsafe1
@@ -177,7 +177,7 @@ hybrid reachability
 		reset { clock' := 0.0}
 		interval aggregation
 		_cont_docking -> m0
-		guard { clock = 150 }
+		guard { clock = 1.0 }
 		reset { _f1' := x1 * 0.001 _f2' := x2 * 0.001 _f3' := x3 * 2 _f4' := x4 * 2 _f5' := x5 _f6' := x6 }
 		interval aggregation
 		startmode -> m0
