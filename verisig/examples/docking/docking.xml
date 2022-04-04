@@ -2,7 +2,6 @@
 <sspaceex xmlns="http://www-verimag.imag.fr/xml-namespaces/sspaceex" math="SpaceEx" version="0.2">
   <component id="docking_sys">
     <param controlled="false" d1="1" d2="1" dynamics="any" local="true" name="x1" type="real" />
-    <param controlled="false" d1="1" d2="1" dynamics="any" local="true" name="x3" type="real" />
     <param controlled="false" d1="1" d2="1" dynamics="any" local="true" name="x2" type="real" />
     <param controlled="false" d1="1" d2="1" dynamics="any" local="true" name="x3" type="real" />
     <param controlled="false" d1="1" d2="1" dynamics="any" local="true" name="x4" type="real" />
