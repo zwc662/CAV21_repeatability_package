@@ -200,10 +200,10 @@ hybrid reachability
 			_f4 in [0, 0]
 			_f5 in [0, 0]
 			_f6 in [0, 0]
-			u0 in [0, 0]
 			u1 in [0, 0]
 			u2 in [0, 0]
 			u3 in [0, 0]
+			u4 in [0, 0]
 			worldtime in [0, 0]
 			clock in [0, 0]
 		}
