@@ -101,7 +101,7 @@ hybrid reachability
 			}
 			inv
 			{
-				clock <= 0.2
+				clock <= 0.1
 			}
 		}
 		unsafe1
@@ -129,7 +129,7 @@ hybrid reachability
 			}
 			inv
 			{
-				clock <= 1.0
+				clock >= 0.0
 			}
 		}
 		startmode
@@ -168,19 +168,19 @@ hybrid reachability
 		reset { clock' := 0 }
 		interval aggregation
 		_cont_docking -> unsafe1
-		guard { worldtime = 3.0 x5 - x6 >= 0.0 }
-		reset { clock' := 0.0 }
+		guard { worldtime = 3.0 x6 - x5 <= 0.0 }
+		reset { }
 		DNNm1 -> _cont_docking
 		guard { }
-		reset { u0' := _f1 u1' := _f2 u2' := _f3 clock' := 0.0 }
+		reset { clock' = 0.0}
 		interval aggregation
 		_cont_docking -> m0
-		guard { clock = 0.2 }
-		reset { clock' := 0.0 _f4' := x4 _f3' := x3 _f5' := x5 _f6' := x6 }
+		guard { clock = 0.1 }
+		reset { _f1' := x1/1000 _f2' := x2/1000 _f3':= x3 * 2 _f4':=x4 * 2 _f5':=x5 _f6':= x6}
 		interval aggregation
 		startmode -> m0
 		guard { clock = 0.0 }
-		reset { _f2' := x2 _f1' := x1 clock' := 0.0 _f4' := x3 _f3' := x3 _f5' := x5 _f6' := x6 }
+		reset { _f1' := x1/1000 _f2' := x2/1000 _f3':= x3 * 2 _f4':=x4 * 2 _f5':=x5 _f6':= x6}
 		interval aggregation
 	}
 	init
@@ -212,7 +212,7 @@ unsafe
 {
 	unsafe1
 	{
-		x5 >= x6
+		x5 - x6 >= 0
 	}
 	}
 }
