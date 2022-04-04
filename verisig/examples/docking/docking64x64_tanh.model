@@ -177,10 +177,3 @@ hybrid reachability
 		}
 	}
 }
-unsafe
-{
-	unsafe1
-	{
-		x5 - x6 >= 0
-	}
-}
