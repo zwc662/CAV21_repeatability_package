@@ -20,7 +20,7 @@
     <param name="worldtime" type="real" local="true" d1="1" d2="1" dynamics="any" controlled="false" />
     <location id="1" name="_cont_docking" x="369.0" y="565.0" width="326.0" height="186.0">
       <invariant>clock &lt;= 0.1</invariant>
-      <flow>x0' == x1 &amp;
+      <flow>
 x1' == x3 &amp;
 x2' == x4 &amp;
 x3' == 2.0 * 0.001027 * x4 + 3 * 0.001027 * 0.001027 * x1 + u1 / 12.0 &amp;
