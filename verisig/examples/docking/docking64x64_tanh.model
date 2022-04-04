@@ -104,35 +104,6 @@ hybrid reachability
 				clock <= 1.0
 			}
 		}
-		unsafe1
-		{
-			nonpoly ode
-			{
-				worldtime' = 0
-                clock' = 1.0
-				u1' = 0
-				u2' = 0
-                u3' = 0
-                u4' = 0
-				x1' = x3
-				x2' = x4
-				x3' = 2.0 * 0.001027 * x4 + 3 * 0.001027 * 0.001027 * x1 + u1 / 12.0
-				clock' = 1
-				x4' = -2.0 * 0.001027 * x3 + u3 / 12.0
-				x5' = ((2.0 * 0.001027 * x4 + 3 * 0.001027 * 0.001027 * x1 + u1 / 12.0) * x3 + (-2.0 * 0.001027 * x3 + u3 / 12.0) * x4) / x5
-                x6' = 2.0 * 0.001027 * (x1 * x3 + x2 * x4) / sqrt(x1 * x1 + x2 * x2)
-                _f1' = 0
-                _f2' = 0
-                _f3' = 0
-                _f4' = 0
-                _f5' = 0
-                _f6' = 0
-			}
-			inv
-			{
-				clock >= 0.0
-			}
-		}
 		startmode
 		{
 			nonpoly ode
@@ -168,10 +139,6 @@ hybrid reachability
 		guard { }
 		reset { clock' := 0 }
 		interval aggregation
-		_cont_docking -> unsafe1
-        guard { worldtime = 3.0 x6 -x5 <= 0.0 }
-		reset { }
-        interval aggregation
 		DNNm1 -> _cont_docking
 		guard { }
 		reset { clock' := 0.0}
