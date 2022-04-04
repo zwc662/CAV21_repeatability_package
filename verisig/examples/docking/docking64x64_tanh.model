@@ -170,7 +170,7 @@ hybrid reachability
 		_cont_docking -> unsafe1
         guard { worldtime = 3.0 x6 -x5 <= 0.0 }
 		reset { }
-        interval aggregatioon
+        interval aggregation
 		DNNm1 -> _cont_docking
 		guard { }
 		reset { clock' = 0.0}
