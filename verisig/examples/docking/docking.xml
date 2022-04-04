@@ -29,16 +29,12 @@ x4' == -2.0 * 0.001027 * x3 + u3 / 12.0 &amp;
 x5' == ((2.0 * 0.001027 * x4 + 3 * 0.001027 * 0.001027 * x1 + u1 / 12.0) * x3 + (-2.0 * 0.001027 * x3 + u3 / 12.0) * x4) / x5 &amp;
 x6' == 2.0 * 0.001027 * (x1 * x3 + x2 * x4) / sqrt(x1 * x1 + x2 * x2) &amp;
 clock' == 1 &amp;
-u1' == 0 &amp;
-u2' == 0 &amp;
-u3' == 0 &amp;
-u4' == 0 &amp;
 worldtime' == 1</flow>
     </location>
     <location id="2" name="DNNm1" x="364.0" y="121.0" width="164.0" height="132.0" />
     </location>
     <location id="3" name="unsafe1" x="811.0" y="282.0" width="102.0" height="90.0">
-      <invariant>clock &lt;= 0</invariant>
+      <invariant>clock &lt;= 1</invariant>
       <flow>clock' == 1</flow>
     </location>
     <transition source="1" target="2">
