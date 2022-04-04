@@ -12,7 +12,7 @@ hybrid reachability
 		fixed orders 4
 		cutoff 1e-7
 		precision 100
-		output attitude_control_sig_tmp
+		output docking_64x64tanh_verisig2_x5x6_120steps
 		max jumps 181
 		print on
 	}
