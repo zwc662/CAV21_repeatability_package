@@ -167,14 +167,14 @@ hybrid reachability
 		guard { }
 		reset { clock' := 0 }
 		interval aggregation
-		_cont_sys -> unsafe1
-		guard { worldtime = 3.0 x5 >= x6 }
+		_cont_docking -> unsafe1
+		guard { worldtime = 3.0 x5 - x6 >= 0.0 }
 		reset { clock' := 0.0 }
-		DNNm1 -> _cont_sys
+		DNNm1 -> _cont_docking
 		guard { }
 		reset { u0' := _f1 u1' := _f2 u2' := _f3 clock' := 0.0 }
 		interval aggregation
-		_cont_sys -> m0
+		_cont_docking -> m0
 		guard { clock = 0.2 }
 		reset { clock' := 0.0 _f4' := x4 _f3' := x3 _f5' := x5 _f6' := x6 }
 		interval aggregation
