@@ -4,7 +4,7 @@ hybrid reachability
 
 	setting
 	{
-		adaptive steps {min 1e-4, max 0.005}
+		adaptive steps {min 1e-5, max 0.001}
 		time 120
 		remainder estimation 1e-1
 		identity precondition 
