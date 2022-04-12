@@ -137,19 +137,19 @@ hybrid reachability
 	{
 		m0 -> DNNm1
 		guard { }
-		reset { _f1:= x1 * 0.001 _f2:= x2 * 0.001 _f3:= x3 * 2 _f4:= x4 * 2 _f5:= x5 _f6:= x6  clock' := 0.0 }
+		reset { clock' := 0.0 }
 		interval aggregation
 		DNNm1 -> _cont_docking
 		guard { }
-		reset {  _f1:= x1 * 0.001 _f2:= x2 * 0.001 _f3:= x3 * 2 _f4:= x4 * 2 _f5:= x5 _f6:= x6  clock' := 0.0}
+		reset {  clock' := 0.0}
 		interval aggregation
 		_cont_docking -> m0
 		guard { clock = 1.0 }
-		reset { _f1:= x1 * 0.001 _f2:= x2 * 0.001 _f3:= x3 * 2 _f4:= x4 * 2 _f5:= x5 _f6:= x6 clock' := 0.0 }
+		reset { _f1' := x1 * 0.001 _f2' := x2 * 0.001 _f3' := x3 * 2 _f4' := x4 * 2 _f5' := x5 _f6' := x6 clock' := 0.0 }
 		interval aggregation
 		startmode -> m0
 		guard { clock = 0.0 }
-		reset { _f1:= x1 * 0.001 _f2:= x2 * 0.001 _f3:= x3 * 2 _f4:= x4 * 2 _f5:= x5 _f6:= x6 clock' := 0.0}
+		reset { _f1' := x1 * 0.001 _f2' := x2 * 0.001 _f3' := x3 * 2 _f4' := x4 * 2 _f5' := x5 _f6' := x6 clock' := 0.0}
 		interval aggregation
 	}
 	init
