@@ -141,7 +141,7 @@ hybrid reachability
 		interval aggregation
 		DNNm1 -> _cont_docking
 		guard { }
-		reset { clock' := 0.0}
+		reset {  u1' := _f1 u2' := _f2 u3' := _f3 u4' := _f4 clock' := 0.0}
 		interval aggregation
 		_cont_docking -> m0
 		guard { clock = 1.0 }
