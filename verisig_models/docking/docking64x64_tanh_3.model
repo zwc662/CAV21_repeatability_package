@@ -12,7 +12,7 @@ hybrid reachability
 		fixed orders 4
 		cutoff 1e-7
 		precision 100
-		output docking_64x64tanh_verisig2_x5x6_120steps
+		output docking_64x64tanh_3_verisig2_x5x6_120steps
 		max jumps 500
 		print on
 	}
@@ -137,19 +137,19 @@ hybrid reachability
 	{
 		m0 -> DNNm1
 		guard { }
-		reset { clock' := 0.0 }
+		reset { _f1:= x1 * 0.001 _f2:= x2 * 0.001 _f3:= x3 * 2 _f4:= x4 * 2 _f5:= x5 _f6:= x6  clock' := 0.0 }
 		interval aggregation
 		DNNm1 -> _cont_docking
 		guard { }
-		reset { clock' := 0.0}
+		reset {  _f1:= x1 * 0.001 _f2:= x2 * 0.001 _f3:= x3 * 2 _f4:= x4 * 2 _f5:= x5 _f6:= x6  clock' := 0.0}
 		interval aggregation
 		_cont_docking -> m0
 		guard { clock = 1.0 }
-		reset { _f1' := x1 * 0.001 _f2' := x2 * 0.001 _f3' := x3 * 2 _f4' := x4 * 2 _f5' := x5 _f6' := x6 clock' := 0.0 }
+		reset { _f1:= x1 * 0.001 _f2:= x2 * 0.001 _f3:= x3 * 2 _f4:= x4 * 2 _f5:= x5 _f6:= x6 clock' := 0.0 }
 		interval aggregation
 		startmode -> m0
 		guard { clock = 0.0 }
-		reset { _f1' := x1 * 0.001 _f2' := x2 * 0.001 _f3' := x3 * 2 _f4' := x4 * 2 _f5' := x5 _f6' := x6 clock' := 0.0}
+		reset { _f1:= x1 * 0.001 _f2:= x2 * 0.001 _f3:= x3 * 2 _f4:= x4 * 2 _f5:= x5 _f6:= x6 clock' := 0.0}
 		interval aggregation
 	}
 	init
@@ -158,8 +158,8 @@ hybrid reachability
 		{
 			x1 in [24, 26]
 			x2 in [24, 26]
-			x3 in [-0.16531479665098364, -0.16531479665098364]
-			x4 in [-0.16531479665098364, -0.16531479665098364]
+			x3 in [0.16531479665098364, 0.16531479665098364]
+			x4 in [0.16531479665098364, 0.16531479665098364]
 			x5 in [0.23379042748477138, 0.23379042748477138]
 			x6 in [0.2697150717707441, 0.27552466108497276]
 			_f1 in [0, 0]
