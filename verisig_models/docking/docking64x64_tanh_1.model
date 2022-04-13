@@ -5,7 +5,7 @@ hybrid reachability
 	setting
 	{
 		adaptive steps {min 1e-4, max 0.005}
-		time 120
+		time 5
 		remainder estimation 1e-1
 		identity precondition 
 		matlab octagon x5, x6
