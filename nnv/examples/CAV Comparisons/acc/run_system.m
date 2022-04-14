@@ -21,17 +21,17 @@ controller = FFNNS(Layers);
 Tr = 0.001; % reachability time step for the plant
 Tc = 0.1; % control period of the plant
 % output matrix
-C = [1 0 0 0 0 0; 0 0 1 0]; % output matrix
+C = [0 0 0 0 1 0;1 0 0 -1 0 0; 0 1 0 0 -1 0]; % output matrix
 num_states = 6;
-num_inputs = 6;
-agent = NonLinearODE(num_states, num_inputs, @dynamics, Tr, Tc, C);
+num_inputs = 1;
+car = NonLinearODE(num_states, num_inputs, @car_dynamics, Tr, Tc, C);
 
 % /* system
-ncs = NonlinearNNCS(controller, agent); 
+ncs = NonlinearNNCS(controller, car); 
 
 % /* ranges of initial set of states of the plant
-lb =  [24; 24; -0.13776233054248638; -0.13776233054248638; 0.1948253562373095; 0.2697150717707441]
-ub =  [26; 26; -0.13776233054248638; -0.13776233054248638; 0.1948253562373095; 0.27552466108497276]
+lb = [90; 32; 0; 10; 30; 0];
+ub = [91; 32.05; 0; 11; 30.05; 0];
 
 % /* reachability parameters
 reachPRM.init_set = Star(lb, ub);
