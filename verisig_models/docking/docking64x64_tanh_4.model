@@ -5,15 +5,15 @@ hybrid reachability
 	setting
 	{
 		adaptive steps {min 1e-4, max 0.005}
-		time 120
+		time 6
 		remainder estimation 1e-1
 		identity precondition 
 		matlab octagon x1, x2
 		fixed orders 6
 		cutoff 1e-10
 		precision 100
-		output docking_tanh64x64tanh_3_verisig2_x1x2_120steps
-		max jumps 500
+		output docking_tanh64x64tanh_4_verisig2_x1x2_120steps
+		max jumps 20
 		print on
 	}
 
